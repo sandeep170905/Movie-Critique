@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Movie Critique</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/e5e4660921.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading-container">
+        <h1 class="heading-one">Movie Critique</h1>
+      </div>
+
+      <!-- Search Form -->
+      <form id="search-form">
+        <input id="search-input" type="search" placeholder="Search movies..." required />
+        <i class="fa fa-search"></i>
+        <button type="reset" class="search-clear" onclick="clearInput()">Clear</button>
+      </form>
+
+      <!-- Home buttons -->
+      <div class="home-buttons">
+        <button onclick="loadTamilMovies()">🎬 All Movies</button>
+        <button onclick="loadCategories()">📂 Categories</button>
+        <button onclick="loadSuggestions()">✨ Suggestions</button>
+      </div>
+     
+
+
+      <button id="home-button">🏠 Home</button>
+      <h2 id="section-title">🎞️ Popular Tamil Movies</h2>
+      <div id="movie-list" class="movie-grid"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
